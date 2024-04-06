@@ -1,0 +1,144 @@
+@media (424px < width < 1200px) {
+  #hero {
+    #hero__img {
+      bottom: -30rem;
+      left: 30rem;
+      z-index: -1;
+    }
+
+    .hero__infos {
+      justify-content: start;
+      padding: 4rem 0;
+      gap: 4rem;
+
+      .hero__infos--texts {
+        justify-content: space-around;
+        padding: 0 2rem;
+      }
+
+      .hero__infos--links {
+        flex-direction: row-reverse;
+        position: absolute;
+        bottom: 5rem;
+        ul {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (width <= 768px) {
+  #hero {
+    #hero__img {
+      bottom: -40rem;
+      left: 26rem;
+      z-index: -1;
+
+      .hero__img--img {
+        max-width: 90svw;
+        left: -25rem;
+        background-position: top center;
+        aspect-ratio: 1/1;
+      }
+
+      .hero__img--bg-color {
+        width: 100svw;
+        height: 80rem;
+        left: -30rem;
+      }
+    }
+
+    .hero__infos {
+      max-width: 100svw;
+      .hero-title {
+        select {
+          width: 100%;
+          font-size: 0.9em;
+        }
+      }
+      .hero__infos--links {
+        flex-direction: row;
+        ul {
+          display: flex;
+          li:nth-child(odd) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width <= 424px) {
+  #hero {
+    height: 95svh;
+
+    .hero__img {
+      display: none;
+    }
+
+    .hero__infos {
+      overflow-y: hidden;
+      height: calc(100svh - 100px);
+      gap: 2rem;
+      justify-content: space-between;
+      padding: 2rem 0 9rem;
+
+      .toggle-title.hero-title {
+        width: fit-content;
+        select {
+          width: 100%;
+          font-size: 1em;
+        }
+      }
+
+      .hero__infos--texts {
+        font-size: 0.7em;
+        padding: 0 3rem;
+        height: fit-content;
+        justify-content: start;
+
+        .links__members {
+          display: grid;
+          place-items: center;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 9rem);
+        }
+      }
+
+      .hero__infos--links {
+        justify-content: space-evenly;
+        height: fit-content;
+        gap: 3rem;
+
+        ul {
+          justify-content: space-evenly;
+          gap: 1rem;
+          li {
+            a {
+              .icon {
+                width: 4rem;
+              }
+            }
+
+            &:nth-child(odd) {
+              display: none;
+            }
+          }
+        }
+
+        .learn-more-presentation {
+          width: 100%;
+          p {
+            font-size: 0.4em;
+          }
+        }
+      }
+    }
+    .btn-change-section {
+      display: block;
+      opacity: 0.5;
+    }
+  }
+}
