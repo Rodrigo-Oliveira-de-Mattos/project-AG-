@@ -83,7 +83,6 @@ select{
         cursor: pointer;
         color: var(--tema-claro-6);
         font-size: 1em;
-        border: none;
         background-color: transparent;
         &:focus-visible {
           outline: none;

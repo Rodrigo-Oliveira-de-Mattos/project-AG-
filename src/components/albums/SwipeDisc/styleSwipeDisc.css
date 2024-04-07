@@ -168,14 +168,14 @@
           position: absolute;
           box-sizing: content-box;
           aspect-ratio: 1/1;
-
+          height: 100%;
           padding: 1rem;
           cursor: pointer;
           background-color: var(--tema-claro-red);
           border: none;
           color: var(--tema-claro-1);
           line-height: 0;
-          font-size: 3em;
+          font-size: 5rem;
           font-weight: bold;
           border-radius: 999px;
           transition: 0.3s ease;

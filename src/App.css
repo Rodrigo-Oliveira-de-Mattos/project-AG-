@@ -4,6 +4,12 @@
   box-sizing: border-box;
   text-decoration: none;
   list-style: none;
+
+  select{
+    border: none;
+    -webkit-border-radius: 2px;
+  }
+
 }
 
 html{

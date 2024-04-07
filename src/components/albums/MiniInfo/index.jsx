@@ -7,8 +7,6 @@ const MiniInfo = ({ miniInfo }) => {
         modal.classList.add('show')
         album.classList.add('modal-open')
 
-        // e.target.id == 'btn-fechar-big-info' ||
-
         modal.addEventListener('click', (e) => {
             if (e.target.id == 'close-modal' || e.target.id == 'big-info-external-modal') {
                 modal.classList.remove('show')

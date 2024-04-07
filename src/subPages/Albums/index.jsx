@@ -1,4 +1,3 @@
-import "./styleAlbums.css"
 import "./albumAnimation.css"
 import { albums } from "../../util/json/albums/albums.json"
 import { useState } from "react";
