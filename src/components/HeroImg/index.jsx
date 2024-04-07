@@ -21,7 +21,7 @@ const Div = styled.div`
     `
 
 const Img = styled.div`
-    background: url(../../public/hero/ag-hero-1.png) no-repeat;
+    background: url(/public/hero/ag-hero-1.png) no-repeat;
     filter: drop-shadow(0px 0px 10px var(--tema-claro-6));
     background-size: contain;
     position: absolute;
