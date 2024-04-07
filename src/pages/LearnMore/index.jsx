@@ -20,9 +20,8 @@ const LearnMore = ({ data }) => {
 
     return (
         <>
-            <HeaderLearnMore className="header-learn-more">
-                <Link to="/" className="header-learn-more__back">{'< Back'}</Link>
-                {/* criar uma pagina para galeria */}
+            <HeaderLearnMore className="header-learn-more" id="header-learn-more">
+                <Link to="/" className="header-learn-more__back">{'<'}<span>Back</span></Link>
                 <ToggleTitle optionValue={data.title} id="learn-more-title" />
                 <a className="header-learn-more__ig" href={data.url.instagram} target="_blank">
                     <img className="ig-img" src={data.url.img} alt="Instagram" />
@@ -31,9 +30,7 @@ const LearnMore = ({ data }) => {
 
             <main className="main-learn-more">
                 <div className="learn-more">
-                    <Link to="/">
-                        <LearnMoreSwiper images={data.swipe} />
-                    </Link>
+                    <LearnMoreSwiper images={data.swipe} />
 
                     <div className="additional-info">
                         <ul>
@@ -65,6 +62,8 @@ const LearnMore = ({ data }) => {
     )
 }
 
+export default LearnMore
+
 const HeaderLearnMore = styled.header`
     display: flex;
     justify-content: space-between;
@@ -75,6 +74,52 @@ const HeaderLearnMore = styled.header`
     letter-spacing: 2px;
     font-size: 2rem;
     background-color: var(--tema-claro-2);
-`
 
-export default LearnMore
+    .header-learn-more__back{
+        font-size: 1.5em;
+        font-weight: bold;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--tema-claro-red);
+        transition: 0.3s ease;
+      
+        &:hover {
+          transform: scale(1.2);
+          transition: 0.3s ease;
+        }
+    }
+
+    .learn-more-title.toggle-title {
+        width: fit-content;
+        transition: 0.3s ease;
+        color: var(--tema-claro-6);
+        font-weight: bold;
+
+        select {
+            flex: 2;
+            color: var(--tema-claro-6);
+            background-color: transparent;
+            text-align: center;
+            font-weight: bold;
+            font-size: 2em;
+            letter-spacing: 1.5px;
+            border: none;
+            cursor: pointer;
+            &:focus-visible {
+              outline: none;
+            }
+          }
+    }
+
+    .header-learn-more__ig {
+        width: 10rem;
+        height: 10rem;
+        aspect-ratio: 1/1;
+    
+        .ig-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+  }
+`
