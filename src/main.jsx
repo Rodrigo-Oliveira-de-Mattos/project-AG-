@@ -25,7 +25,7 @@ const router = createBrowserRouter([
         element: <MainPage />
       },
       {
-        path: "atarashii-gakko!/learn-more",
+        path: "/atarashii-gakko!/learn-more",
         element: <LearnMore data={learnMore[0]} />
       },
       {
