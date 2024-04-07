@@ -12,17 +12,12 @@ html{
   scroll-behavior: smooth;
 }
 
-/* main{
-  background: url(../public/background/day.jpg) no-repeat;
-  background-size: cover;
-} */
-
 a{
   color: black;
 }
 
 .bg-img-city{
-  background: url(../public/background/day.jpg) no-repeat;
+  background: url(/background/day.jpg) no-repeat;
   background-attachment: scroll;
   background-position: center;
   background-repeat: no-repeat;

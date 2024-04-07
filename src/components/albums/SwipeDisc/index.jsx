@@ -6,20 +6,20 @@ const SwipeDisc = ({ info }) => {
         <>
             <div className="album-swipe">
                 <div className="album-swipe__img active">
-                    <img className="cd" src="/public/albums/cd.png" alt="cd" />
-                    <img className="album-cover" src="/public/albums/2018-maenarawanai.jpg" alt="Wakage Ga Itaru" />
+                    <img className="cd" src="/albums/cd.png" alt="cd" />
+                    <img className="album-cover" src="/albums/2018-maenarawanai.jpg" alt="Wakage Ga Itaru" />
                 </div>
                 <div className="album-swipe__img next">
-                    <img className="cd" src="/public/albums/cd.png" alt="cd" />
-                    <img className="album-cover" src="/public/albums/2019-wakage-ga-itaru.jpg" alt="Wakage Ga Itaru" />
+                    <img className="cd" src="/albums/cd.png" alt="cd" />
+                    <img className="album-cover" src="/albums/2019-wakage-ga-itaru.jpg" alt="Wakage Ga Itaru" />
                 </div>
                 <div className="album-swipe__img other">
-                    <img className="cd" src="/public/albums/cd.png" alt="cd" />
-                    <img className="album-cover" src="/public/albums/2021-snacktime.jpg" alt="Wakage Ga Itaru" />
+                    <img className="cd" src="/albums/cd.png" alt="cd" />
+                    <img className="album-cover" src="/albums/2021-snacktime.jpg" alt="Wakage Ga Itaru" />
                 </div>
                 <div className="album-swipe__img prev">
-                    <img className="cd" src="/public/albums/cd.png" alt="cd" />
-                    <img className="album-cover" src="/public/albums/2023-ichijikikoku.jpg" alt="Wakage Ga Itaru" />
+                    <img className="cd" src="/albums/cd.png" alt="cd" />
+                    <img className="album-cover" src="/albums/2023-ichijikikoku.jpg" alt="Wakage Ga Itaru" />
                 </div>
 
             </div>

@@ -28,7 +28,7 @@ const SectionHero = styled.section`
 `
 
 const BackgroundImg = styled.div`
-  background: url(../../public/background/ag-hero.jpg) no-repeat;
+  background: url(/background/ag-hero.jpg) no-repeat;
   background-position: left;
   background-attachment: fixed;
   background-size: cover;

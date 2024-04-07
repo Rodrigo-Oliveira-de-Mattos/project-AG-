@@ -59,7 +59,7 @@ function Header() {
         <HeaderMainPage className="header-main-page">
             <Logo className="logo">
                 <a href="https://atarashiigakko.com">
-                    <img src="/public/logo/AG-white.png" alt="LOGO ATARASHII GAKKO!" />
+                    <img src="/logo/AG-white.png" alt="LOGO ATARASHII GAKKO!" />
                 </a>
             </Logo>
             <nav role="navigation">

@@ -3,7 +3,7 @@
         {
             "id": 0,
             "name": "Maenarawanai",
-            "cover": "/public/albums/2018-maenarawanai.jpg",
+            "cover": "/albums/2018-maenarawanai.jpg",
             "year": "2018",
             "tracks": "10",
             "recordCompany": "Victor Entertainment",
@@ -20,7 +20,7 @@
         {
             "id": 1,
             "name": "Wakage Ga Itaru",
-            "cover": "/public/albums/2019-wakage-ga-itaru.jpg",
+            "cover": "/albums/2019-wakage-ga-itaru.jpg",
             "year": "2019",
             "tracks": "11",
             "recordCompany": "Victor Entertainment",
@@ -37,7 +37,7 @@
         {
             "id": 2,
             "name": "SNACKTIME",
-            "cover": "/public/albums/2021-snacktime.jpg",
+            "cover": "/albums/2021-snacktime.jpg",
             "year": "2021",
             "tracks": "5",
             "recordCompany": "88rising",
@@ -54,7 +54,7 @@
         {
             "id": 3,
             "name": "ICHIJIKIKOKU",
-            "cover": "/public/albums/2023-ichijikikoku.jpg",
+            "cover": "/albums/2023-ichijikikoku.jpg",
             "year": "2023",
             "tracks": "6",
             "recordCompany": "88rising",
