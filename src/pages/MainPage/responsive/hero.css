@@ -1,4 +1,4 @@
-@media (424px < width < 1200px) {
+@media (500px < width < 1200px) {
   #hero {
     #hero__img {
       bottom: -30rem;
@@ -43,9 +43,9 @@
       }
 
       .hero__img--bg-color {
-        width: 100svw;
-        height: 80rem;
-        left: -30rem;
+        width: 120svw;
+        height: 65rem;
+        left: -40rem;
       }
     }
 
@@ -59,6 +59,7 @@
       }
       .hero__infos--links {
         flex-direction: row;
+        font-size: 0.5em;
         ul {
           display: flex;
           li:nth-child(odd) {
@@ -70,7 +71,7 @@
   }
 }
 
-@media (width <= 424px) {
+@media (width <= 500px) {
   #hero {
     height: 95svh;
 
@@ -110,6 +111,7 @@
       .hero__infos--links {
         justify-content: space-evenly;
         height: fit-content;
+        font-size: 1.5em;
         gap: 3rem;
 
         ul {

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import ToggleTitle from "../../components/TogglerTitles"
 import { Link } from "react-router-dom"
-import "./styleLearnMore.css"
+import "./responsiveLearnMore.css"
 import LearnMoreSwiper from "../../components/LearnMoreSwiper"
 
 const LearnMore = ({ data }) => {
