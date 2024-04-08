@@ -28,36 +28,36 @@ const LearnMore = ({ data }) => {
                 </a>
             </HeaderLearnMore>
 
-            <main className="main-learn-more">
-                <div className="learn-more">
+            <Main className="main-learn-more">
+                <DivLearnMore className="learn-more">
                     <LearnMoreSwiper images={data.swipe} />
 
-                    <div className="additional-info">
-                        <ul>
+                    <AdditionalInfo className="additional-info">
+                        <Ul>
                             {data.id === "AG" ? <li className="record-company"><a href={data.additionalInfo1.url} target="_blank">{data.additionalInfo1.recordCompany}</a></li> : <li className="dates"><p>{data.additionalInfo1}</p></li>}
                             {data.id === "AG" ? <li className="record-company"><a href={data.additionalInfo2.url} target="_blank">{data.additionalInfo2.recordCompany}</a></li> : <li className="dates"><p>{calculateAge()}</p></li>}
-                        </ul>
-                    </div>
+                        </Ul>
+                    </AdditionalInfo>
 
-                    <article>
-                        <div className="texts">
+                    <Article>
+                        <Texts className="texts">
                             {data.article.map(
                                 (paragraph, index) => (
                                     <p key={index}>{paragraph}</p>
                                 )
                             )}
-                        </div>
-                        <div className="fonts">
+                        </Texts>
+                        <Fonts className="fonts">
                             {data.fonts.map(
                                 (font, index) => (
                                     <a href={font.url} target="_blank" key={index}><i>{font.font}</i></a>
                                 )
                             )}
                             <i><img src="/public/logo/AG.png" alt="" /></i>
-                        </div>
-                    </article>
-                </div>
-            </main>
+                        </Fonts>
+                    </Article>
+                </DivLearnMore>
+            </Main>
         </>
     )
 }
@@ -123,3 +123,100 @@ const HeaderLearnMore = styled.header`
     }
   }
 `
+
+const Main = styled.main`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4rem;
+    font-size: 2rem;
+`
+
+const DivLearnMore = styled.div`
+    width: min(calc(100vw - 80px), 1200px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
+
+const AdditionalInfo = styled.div`
+    margin-top: 3rem;
+    height: 3.5rem;
+    @media (width > 730px){
+        width: 650px;
+    }
+`
+
+const Ul = styled.ul`
+    display: flex;
+    gap: 2rem;
+    height: inherit;
+
+    li {
+        text-align: center;
+        flex: 1;
+        height: inherit;
+        border-radius: 100vw;
+  
+        &.record-company {
+          background-color: var(--tema-claro-red);
+          opacity: 0.8;
+          transition: 0.1s ease;
+          &:hover {
+            transition: 0.1s ease;
+            transform: scale(1.07);
+            opacity: 1;
+          }
+  
+          a {
+            color: var(--tema-claro-1);
+            text-align: center;
+            width: 100%;
+            display: grid;
+            place-items: center;
+            height: 3.5rem;
+          }
+        }
+  
+        &.dates {
+          background-color: var(--tema-claro-6);
+          color: var(--tema-claro-1);
+          text-align: center;
+          width: 100%;
+          display: grid;
+          place-items: center;
+          height: 3.5rem;
+        }
+      }
+`
+
+const Article = styled.article`
+    p:not(:nth-child(1)) {
+        text-align: justify;
+        margin-top: 2rem;
+        letter-spacing: 1px;
+    }
+`
+
+const Texts = styled.div`
+    margin: 2rem 0;
+    padding: 2rem 3rem;
+    border: 1px solid;
+`
+
+const Fonts = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, 2fr) 1fr;
+    gap: 1rem;
+    text-align: end;
+
+    a {
+    padding: 1rem;
+    border: 1px solid;
+    }
+
+    i img {
+    height: 4rem;
+    }
+`
+
