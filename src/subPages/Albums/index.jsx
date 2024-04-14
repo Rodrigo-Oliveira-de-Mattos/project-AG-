@@ -10,11 +10,39 @@ import styled from "styled-components";
 
 const Albums = () => {
     const [index, setIndex] = useState(0);
-    const [prevIndex, setPrevIndex] = useState('start');
-    const [nextIndex, setNextIndex] = useState('start');
+    const [prevIndex, setPrevIndex] = useState(9);
+    const [nextIndex, setNextIndex] = useState(9);
     const [albumsInfo, setAlbumsInfo] = useState(albums[index]);
     const [count, setCount] = useState(0);
     const [mouseOut, setMouseOut] = useState(true)
+    const windowHeight = window.innerHeight
+    const windowWidth = window.innerWidth
+
+    useEffect(() => {
+        const swipe = document.querySelector('#swipe-disc')
+        let start
+        let end
+
+        swipe.addEventListener("touchstart", (e) => {
+            start = e.touches[0].clientX
+        })
+        swipe.addEventListener("touchmove", (e) => {
+            end = e.touches[0].clientX
+        })
+        swipe.addEventListener("touchend", () => {
+            handleSwipe(start, end)
+        })
+    }, [])
+
+    function handleSwipe(start, end) {
+        console.log(start > end ? "esquerda" : "direita");
+
+        if (start > end) {
+            document.querySelector('.nextButton').click()
+        } else if (start < end) {
+            document.querySelector('.prevButton').click()
+        }
+    }
 
     useEffect(() => {
         const album = document.querySelector('#swipe-disc')
@@ -36,7 +64,7 @@ const Albums = () => {
     })
 
     useEffect(() => {
-        if (mouseOut == true) {
+        if (mouseOut == true && windowWidth > windowHeight) {
             const interval = setInterval(() => {
                 setCount(count + 1);
                 document.querySelector('.nextButton').click()
@@ -105,7 +133,6 @@ const Albums = () => {
 
             setTimeout(() => {
                 switchClass("next");
-
                 classesForAnimationNext.forEach((item) => {
                     item.classList.remove('animationNext');
                 })
@@ -141,7 +168,7 @@ const Albums = () => {
     return (
         <AlbumsSection className="albums" id="albums">
             <div id="big-info-external-modal">
-                <BigInfo info={albumsInfo} />   
+                <BigInfo info={albumsInfo} />
             </div>
             <div className="swipe-disc" id='swipe-disc'>
                 <button className="prevButton" onClick={() => handlePrevIndex()}></button>

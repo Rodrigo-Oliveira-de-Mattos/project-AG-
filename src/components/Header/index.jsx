@@ -67,7 +67,7 @@ function Header() {
                 <div id="menuToggle">
                     <div className="hamburguer">
                         <input onClick={handleChecked} id="check-hamburguer" type="checkbox" />
-                        <div class="btn not-active">
+                        <div className="btn not-active">
                             <span></span>
                             <span></span>
                             <span></span>
@@ -79,7 +79,7 @@ function Header() {
                     <UlMenu className="header-menu hidden">
                         <li className={heroClass}><a href="#hero">Atarashii Gakko!</a></li>
                         <li className={membersClass}><a href="#members">Members</a></li>
-                        <li className={albunsClass}><a href="#albums">Albums</a></li>
+                        <li className={albunsClass} id="albumsMenu"><a href="#albums">Albums</a></li>
                         <li className={musicClass}><a href="#music">Music</a></li>
                     </UlMenu>
                 </div>

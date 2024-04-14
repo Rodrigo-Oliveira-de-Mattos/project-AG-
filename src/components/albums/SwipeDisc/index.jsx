@@ -2,6 +2,8 @@ import MiniInfo from '../MiniInfo'
 import './styleSwipeDisc.css'
 
 const SwipeDisc = ({ info }) => {
+
+   
     return (
         <>
             <div className="album-swipe">

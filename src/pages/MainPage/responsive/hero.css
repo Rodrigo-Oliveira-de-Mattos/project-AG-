@@ -1,4 +1,4 @@
-@media (500px < width < 1200px) {
+@media (450px < width < 1200px) {
   #hero {
     #hero__img {
       bottom: -30rem;
@@ -71,7 +71,7 @@
   }
 }
 
-@media (width <= 500px) {
+@media (width <= 450px) {
   #hero {
     height: 95svh;
 

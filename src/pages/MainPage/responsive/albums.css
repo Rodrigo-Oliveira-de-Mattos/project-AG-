@@ -48,6 +48,11 @@
       .prevButton,
       .nextButton {
         width: 35%;
+        @media (orientation: portrait) {
+          top: 5rem;
+          height: 10rem;
+          width: 50%;
+        }
       }
 
       @media (width >= 650px) {
@@ -66,7 +71,7 @@
     #big-info-external-modal.show {
       display: grid;
 
-      .big-info #close-modal{
+      .big-info #close-modal {
         display: grid;
       }
     }
